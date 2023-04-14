@@ -1,7 +1,18 @@
 package com.edix.eventos.modelo.entities;
 
 import java.io.Serializable;
-import javax.persistence.*;
+//import javax.persistence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+
 import java.util.Date;
 import java.util.List;
 
@@ -47,6 +58,10 @@ public class Usuario implements Serializable {
 	private List<Perfile> perfiles;
 
 	public Usuario() {
+	}
+
+	public Usuario(String nombre2, String email2, String password2) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getUsername() {
