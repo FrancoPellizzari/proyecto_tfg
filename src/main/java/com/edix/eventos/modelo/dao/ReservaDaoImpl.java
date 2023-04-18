@@ -70,5 +70,11 @@ public class ReservaDaoImpl implements ReservaDao {
 		return filas;
 	}
 
+	@Override
+	public int plazasocupadas(int idEvento) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	
 }

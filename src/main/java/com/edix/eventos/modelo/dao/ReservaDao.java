@@ -12,6 +12,6 @@ public interface ReservaDao {
 	int borrarReserva(int idReserva);
 	int modificarReserva(Reserva reserva);
 	int altaReserva(Reserva reserva);
-	int plazasocupadas (int idEvento);
+	int plazasocupadas (int idEvento); //??
 
 }
