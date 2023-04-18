@@ -41,7 +41,7 @@ public class Evento implements Serializable {
 
 	private int duracion;
 
-	private String estado;
+	private String ciudad;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="fecha_inicio")
@@ -117,12 +117,12 @@ public class Evento implements Serializable {
 		this.duracion = duracion;
 	}
 
-	public String getEstado() {
-		return this.estado;
+	public String getCiudad() {
+		return this.ciudad;
 	}
 
-	public void setEstado(String estado) {
-		this.estado = estado;
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
 	}
 
 	public Date getFechaInicio() {

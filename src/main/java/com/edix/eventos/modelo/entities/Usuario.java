@@ -3,6 +3,7 @@ package com.edix.eventos.modelo.entities;
 import java.io.Serializable;
 //import javax.persistence.*;
 
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

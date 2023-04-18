@@ -1,5 +1,7 @@
 package com.edix.eventos.modelo.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -32,5 +34,34 @@ public class EventoDaoImpl implements EventoDao {
 		
 		return eventoRepo.findById(idEvento).orElse(null);
 	}
+	
+	@Override
+	public List<Evento> eventoactivos() {
+		// TODO Auto-generated method stub
+		return eventoRepo.eventoactivos();
+	}
+	
+	@Override
+	public List<Evento> eventosdestacados() {
+		// TODO Auto-generated method stub
+		return eventoRepo.eventosdestacados();
+	}
+	
+	@Override
+	public Evento altaEvento(Evento evento) {
+		// TODO Auto-generated method stub
+		return eventoRepo.save(evento);
+	}
+	
+	@Override
+	public Evento modificarEvento(Evento evento) {
+		// TODO Auto-generated method stub
+		return eventoRepo.save(evento);
+	}
 
+	@Override
+	public void eliminarEvento(int idEvento) {
+		
+		eventoRepo.deleteById(idEvento);
+	}
 }
