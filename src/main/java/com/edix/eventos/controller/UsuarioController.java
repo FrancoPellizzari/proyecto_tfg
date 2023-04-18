@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.edix.eventos.dto.RegistroUsuarioDTO;
 import com.edix.eventos.modelo.dao.PerfilDao;
 import com.edix.eventos.modelo.dao.UsuarioDao;
-import com.edix.eventos.modelo.entities.Evento;
+
 import com.edix.eventos.modelo.entities.Usuario;
 import com.edix.eventos.repository.UsuarioRepository;
 
@@ -55,7 +55,7 @@ public class UsuarioController {
 	}
 	
 		@PostMapping("/login")
-		public String login(jakarta.servlet.http.HttpServletRequest request, HttpSession session) {
+		public String login(HttpServletRequest request, HttpSession session) {
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
 
