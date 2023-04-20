@@ -14,4 +14,5 @@ public interface EventoDao {
 	Evento altaEvento (Evento evento);
 	Evento modificarEvento (Evento evento);
 	void eliminarEvento (int idEvento);
+	List<Evento>mostrarTodos();
 }

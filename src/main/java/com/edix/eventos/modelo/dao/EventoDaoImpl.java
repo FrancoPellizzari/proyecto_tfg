@@ -64,4 +64,9 @@ public class EventoDaoImpl implements EventoDao {
 		
 		eventoRepo.deleteById(idEvento);
 	}
+	@Override
+	public List<Evento> mostrarTodos() {
+		// TODO Auto-generated method stub
+		return eventoRepo.findAll();
+	}
 }

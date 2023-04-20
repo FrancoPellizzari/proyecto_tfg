@@ -1,8 +1,8 @@
 package com.edix.eventos.controller;
 
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -68,14 +68,6 @@ public class EventoController {
 		return "Evento eliminado";
 	}
 	
-	@GetMapping ("/plazasQuedan/{idEvento}")
-	public Map <String, Integer> plazasQuedan(@PathVariable ("idEvento") int idEvento){
-		Evento e = eventoRepo.buscarUno(idEvento);
-		int ocupadas = reservaRepo.plazasocupadas(idEvento);
-		int respuesta= e.getAforoMax()-ocupadas;
-		Map <String, Integer> m= new HashMap<String, Integer>();
-		m.put("plazas_quedan", respuesta);
-		return m;
-	}
+	
 
 }

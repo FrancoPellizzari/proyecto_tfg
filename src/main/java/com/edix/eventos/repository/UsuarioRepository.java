@@ -20,11 +20,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 		
 		Usuario altaUsuario(Usuario usuario);
 		
-		/*@Modifying
-	    @Query("update Usuario u set u.nombre = :nombre, u.email = :email where u.id = :id")
-	    void modificarUsuario(@Param("id") Long id, @Param("nombre") String nombre, 
-	                          @Param("email") String email, @Param("edad") int edad);
-	 */
+		
 		
 		Usuario modificarUsuario(Usuario usuario);
 		void eliminarUsuario(String username);
